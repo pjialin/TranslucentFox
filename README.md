@@ -1,0 +1,2 @@
+# TranslucentFox
+🤭 Translucent UI forFirefox
