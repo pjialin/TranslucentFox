@@ -1,0 +1,60 @@
+/* light theme header */
+:root[lwthemetextcolor="dark"] #navigator-toolbox,
+:root:not([lwt-default-theme-in-dark-mode]) #navigator-toolbox {
+    -moz-appearance: -moz-mac-vibrant-titlebar-light !important;
+}
+
+/* dark theme header */
+:root[lwthemetextcolor="bright"] #navigator-toolbox,
+:root[lwt-default-theme-in-dark-mode] #navigator-toolbox {
+    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+}
+
+/* search bar background color,
+   default use shadow color for the light and dark theme
+ */
+/* transparent background, uncomment it if you want */
+/* #urlbar:not([focused="true"], [open]) > #urlbar-background, #searchbar:not(:focus-within) {
+    background-color: transparent !important;
+} */
+
+/* light theme */
+:root[lwthemetextcolor="dark"] #urlbar:not([focused="true"], [open]) > #urlbar-background, #searchbar:not(:focus-within),
+:root:not([lwt-default-theme-in-dark-mode]) #urlbar:not([focused="true"], [open]) > #urlbar-background, #searchbar:not(:focus-within) {
+    background-color: #E8E7E480 !important;
+}
+
+/* dark theme */
+:root[lwthemetextcolor="bright"] #urlbar:not([focused="true"], [open]) > #urlbar-background, #searchbar:not(:focus-within),
+:root[lwt-default-theme-in-dark-mode] #urlbar:not([focused="true"], [open]) > #urlbar-background, #searchbar:not(:focus-within) {
+    background-color: #55545270 !important;
+}
+
+/* toolbar area background  */
+.browser-toolbar:not(.titlebar-color) {
+    background-color: transparent !important;
+}
+
+/* icon in the url bar background */
+#urlbar:not([open]) #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:not(:hover),
+#urlbar:not([open]) #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:not(:hover),
+#urlbar:not([open]) #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:not(:hover) {
+    background-color: transparent !important;
+}
+
+/* url bar padding */
+.urlbar-input-box {
+    padding: 0 1rem;
+}
+
+/* selected tab color */
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected=true],
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected=true] {
+    background-image: none !important;
+    background-color: color-mix(in srgb, currentColor 11%, transparent) !important;
+}
+
+/* move url bar up three pixel */
+#titlebar {
+    margin-bottom: -3px;
+}
